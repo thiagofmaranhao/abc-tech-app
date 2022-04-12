@@ -10,7 +10,7 @@ class InitialPage extends GetView<InitialController> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
-          title: Text("Olá, ${Get.arguments['name']}"),
+          title: Text("Olá, ${Get.arguments?['name'] ?? ''}"),
           automaticallyImplyLeading: false,
         ),
         body: Container(
