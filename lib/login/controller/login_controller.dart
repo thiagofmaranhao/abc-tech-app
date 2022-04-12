@@ -17,7 +17,7 @@ class LoginController extends GetxController with StateMixin<Login> {
   void executeLogin() {
     checkAccessCode(accessCodeController.text).then((auth) {
       if (auth) {
-        Get.toNamed("/home");
+        Get.toNamed("/initial", arguments: {"name": login?.name});
       } else {
         Get.snackbar('Login', 'Invalid access code');
       }

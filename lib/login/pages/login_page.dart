@@ -1,4 +1,3 @@
-import 'package:abc_tech_app_class/assistance_list/pages/home_page.dart';
 import 'package:abc_tech_app_class/login/controller/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,7 +21,8 @@ class LoginPage extends GetView<LoginController> {
               TextField(
                 controller: controller.accessCodeController,
                 decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Código'),
+                    border: OutlineInputBorder(),
+                    labelText: 'Digite seu código numérico'),
               ),
               OutlinedButton(
                   onPressed: controller.executeLogin,

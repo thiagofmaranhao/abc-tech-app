@@ -2,10 +2,13 @@ import 'package:abc_tech_app_class/assistance_list/pages/home_bind.dart';
 import 'package:abc_tech_app_class/assistance_list/pages/home_page.dart';
 import 'package:abc_tech_app_class/assistance_list/provider/assistance_provider.dart';
 import 'package:abc_tech_app_class/assistance_list/services/assistance_service.dart';
+import 'package:abc_tech_app_class/initial/pages/initial_bind.dart';
+import 'package:abc_tech_app_class/initial/pages/initial_page.dart';
 import 'package:abc_tech_app_class/login/pages/login_bind.dart';
 import 'package:abc_tech_app_class/login/pages/login_page.dart';
 import 'package:abc_tech_app_class/login/provider/login_provider.dart';
 import 'package:abc_tech_app_class/login/services/login_service.dart';
+import 'package:abc_tech_app_class/new_assistance/pages/new_assistance_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -41,6 +44,11 @@ class MyApp extends StatelessWidget {
       ),
       getPages: [
         GetPage(name: "/", page: () => const LoginPage(), binding: LoginBind()),
+        GetPage(
+            name: "/initial",
+            page: () => const InitialPage(),
+            binding: InitialBind()),
+        GetPage(name: "/newAssistance", page: () => const NewAssistancePage()),
         GetPage(
             name: "/home", page: () => const HomePage(), binding: HomeBind())
       ],

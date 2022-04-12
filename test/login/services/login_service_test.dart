@@ -28,7 +28,7 @@ void main() {
 
   test('Testando o login service', () async {
     var login = await service.login("1");
-    expect(login.accessCode, "1");
-    expect(login.name, "John Doe");
+    expect(login?.accessCode, "1");
+    expect(login?.name, "John Doe");
   });
 }
