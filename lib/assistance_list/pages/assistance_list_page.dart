@@ -3,15 +3,21 @@ import 'package:abc_tech_app_class/assistance_list/model/assistance.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomePage extends GetView<AssistanceController> {
-  const HomePage({Key? key}) : super(key: key);
+class AssistanceListPage extends GetView<AssistanceController> {
+  const AssistanceListPage({Key? key}) : super(key: key);
 
   Widget renderAssists(List<Assistance> list) {
     return ListView.builder(
         shrinkWrap: true,
         itemCount: list.length,
-        itemBuilder: (context, index) =>
-            ListTile(title: Text(list[index].name)));
+        itemBuilder: (context, index) => ListTile(
+              title: Text(list[index].name),
+              selectedColor: Colors.blueAccent,
+              selected: controller.isSelected(index),
+              onTap: () {
+                controller.selectAssist(index);
+              },
+            ));
   }
 
   @override
