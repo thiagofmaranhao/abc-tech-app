@@ -1,7 +1,9 @@
-import 'package:abc_tech_app_class/assistance_list/pages/home_bind.dart';
-import 'package:abc_tech_app_class/assistance_list/pages/home_page.dart';
+import 'package:abc_tech_app_class/assistance_list/pages/assistance_list_bind.dart';
+import 'package:abc_tech_app_class/assistance_list/pages/assistance_list_page.dart';
 import 'package:abc_tech_app_class/assistance_list/provider/assistance_provider.dart';
 import 'package:abc_tech_app_class/assistance_list/services/assistance_service.dart';
+import 'package:abc_tech_app_class/order/pages/order_bind.dart';
+import 'package:abc_tech_app_class/order/pages/order_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,20 +25,14 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       getPages: [
+        GetPage(name: "/", page: () => const OrderPage(), binding: OrderBind()),
         GetPage(
-            name: "/home", page: () => const HomePage(), binding: HomeBind())
+            name: "/services",
+            page: () => const AssistanceListPage(),
+            binding: AssistanceListBind()),
       ],
     );
   }
