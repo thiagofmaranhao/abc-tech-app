@@ -2,8 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:abc_tech_app_class/assistance_list/model/assistance.dart';
-import 'package:abc_tech_app_class/assistance_list/provider/assistance_provider.dart';
+import 'package:abc_tech_app_class/assistance_list/provider/assistance_provider_interface.dart';
 import 'package:abc_tech_app_class/assistance_list/services/assistance_service.dart';
+import 'package:abc_tech_app_class/assistance_list/services/assistance_service_interface.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get_connect.dart';
 import 'package:mockito/annotations.dart';

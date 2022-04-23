@@ -25,7 +25,7 @@ class OrderPage extends GetView<OrderController> {
             Row(children: const [
               Expanded(
                   child: Text(
-                'Preencha o fomulário de ordem de serviço',
+                'Preencha o formulário de ordem de serviço',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
               ))
@@ -74,7 +74,7 @@ class OrderPage extends GetView<OrderController> {
                 controller.finishStartOrder();
               }, child: Obx((() {
                 if (controller.screenState.value == OrderState.creating) {
-                  return const Text("Inicar serviço");
+                  return const Text("Iniciar serviço");
                 } else {
                   return const Text("Finalizar serviço");
                 }
