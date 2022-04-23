@@ -34,7 +34,7 @@ class OrderLocation {
     return OrderLocation(
       latitude: map['latitude']?.toDouble() ?? 0.0,
       longitude: map['longitude']?.toDouble() ?? 0.0,
-      date: DateTime.fromMillisecondsSinceEpoch(map['dateTime']),
+      date: DateTime.fromMillisecondsSinceEpoch(map['date']),
     );
   }
 
@@ -45,7 +45,7 @@ class OrderLocation {
 
   @override
   String toString() =>
-      'OrderLocation(latitude: $latitude, longitude: $longitude, dateTime: $date)';
+      'OrderLocation(latitude: $latitude, longitude: $longitude, date: $date)';
 
   @override
   bool operator ==(Object other) {
